@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,98 @@
 
     <!--==========FAVICON==========-->
 
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
 
     <!--==========CDN LINK==========-->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
+
 <body>
 
     <!--==========HEADER==========-->
 
-    <header></header>
-
+    <header>
+        <nav class="container relative flex items-start justify-between py-5">
+          <div class="logo">
+            <img src="./images/Logo.svg" alt="">
+          </div>
+          <div id="nav-menu"
+            class="absolute top-0 left-0 hidden w-full py-12 text-center text-white bg-black border-b-2 border-primary md:static md:block md:w-auto md:bg-white md:text-black md:border-none md:py-2">
+            <ul class="flex flex-col gap-5 pt-3 md:flex-row">
+              <li>
+                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#home">Today special offers</a>
+              </li>
+              <li>
+                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#services">Why FoodHut</a>
+              </li>
+              <li>
+                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#work">Our Menu</a>
+              </li>
+              <li>
+                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#about">Our Popular food</a>
+              </li>
+    
+              <button
+                class="hidden px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl md:block">
+                <a href="#contact">Downlode App</a>
+              </button>
+            </ul>
+    
+            <div id="nav-close" class="absolute cursor-pointer right-8 top-10 md:hidden">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+    
+          <div id="hamburger" class="cursor-pointer md:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </header>
+    
     <!--==========HERO SECTION==========-->
 
-    <section></section>
+      <section id="hero">
+        <div class="container flex flex-col-reverse items-center md:flex-row md:justify-between md:items-start">
+        <div class="items-center pt-16">
+            <button class="flex gap-2 px-5 py-3 mb-6 bg-opacity-5 bg-primary rounded-3xl">
+                <img src="./images/heart.svg" alt="">
+                <p>People Trust us</p>
+            </button>
+            <h1 class="text-5xl font-bold lg:text-6xl">We're <span class="text-primary">Serious</span> For <span class="text-primary">Food</span> & <span class="text-secondary">Delivery</span>.</h1>
+            <div class="flex border-2 border-black max-w-[400px] search-bar rounded-3xl">
+                <img src="./images/search.svg" alt="">
+                <input class="border-none" type="search" placeholder="Search food">
+                <img class="" src="./images/searchicon.svg" alt="">
+            </div>
+        </div>
+        <div class="md:min-w-[428px]">
+            <img src="./images/heroimg.svg" alt="">
+        </div>
+        </div>
+      </section>
 
     <!--==========SPECIAL OFFERS==========-->
 
-    <section></section>
+    <section>
+        <div class="container py-20 text-center">
+            <div class="top-heading">
+                <h1 class="text-5xl">Today <span class="text-primary">special</span> offers</h1>
+                <p class="px-0 md:px-24">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+
+            <div class="flex justify-center bg-white cards ">
+                <div class=" card">
+                    <img src="./images/card1.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--==========ABOUT US==========-->
 
@@ -50,4 +124,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
