@@ -2,127 +2,477 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Hutt</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Hutt</title>
 
-    <!--==========CSS LINK==========-->
-    <link rel="stylesheet" href="output.css">
+  <!--==========CSS LINK==========-->
+  <link rel="stylesheet" href="output.css">
 
-    <!--==========FAVICON==========-->
+  <!--==========FAVICON==========-->
 
-    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
 
-    <!--==========CDN LINK==========-->
+  <!--==========CDN LINK==========-->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
 
 <body>
 
-    <!--==========HEADER==========-->
+  <!--==========HEADER==========-->
 
-    <header>
-        <nav class="container relative flex items-start justify-between py-5">
-          <div class="logo">
-            <img src="./images/Logo.svg" alt="">
+  <header>
+    <nav class="container relative flex items-start justify-between px-2 py-5">
+      <div class="logo">
+        <img src="./images/Logo.svg" alt="">
+      </div>
+      <div id="nav-menu"
+        class="absolute top-0 left-0 hidden w-full py-12 text-center text-white bg-black border-b-2 border-primary md:static md:block md:w-auto md:bg-white md:text-black md:border-none md:py-2">
+        <ul class="flex flex-col gap-5 pt-3 md:flex-row">
+          <li>
+            <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Today special
+              offers</a>
+          </li>
+          <li>
+            <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Why FoodHut</a>
+          </li>
+          <li>
+            <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Our Menu</a>
+          </li>
+          <li>
+            <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Our Popular food</a>
+          </li>
+
+          <button
+            class="hidden px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl md:block">
+            <a href="#contact">Downlode App</a>
+          </button>
+        </ul>
+
+        <div id="nav-close" class="absolute cursor-pointer right-8 top-10 md:hidden">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <div id="hamburger" class="cursor-pointer md:hidden">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!--==========HERO SECTION==========-->
+
+  <section id="hero">
+    <div class="container flex flex-col-reverse items-center px-2 md:flex-row md:justify-between md:items-start">
+
+      <div class="items-center pt-16">
+
+        <button class="flex gap-2 px-5 py-3 mb-6 bg-opacity-5 bg-primary rounded-3xl">
+          <img src="./images/heart.svg" alt="">
+          <p>People Trust us</p>
+        </button>
+
+        <h1 class="text-5xl font-bold lg:text-6xl">We're <span class="text-primary">Serious</span> For <span
+            class="text-primary">Food</span> & <span class="text-secondary">Delivery</span>.</h1>
+        <div class="flex justify-between my-9 px-4 border-2 border-black max-w-[400px] search-bar rounded-3xl">
+          <div class="flex items-center gap-x-4">
+            <img class="w-6 h-6" src="./images/search.svg" alt="">
+            <input class="outline-none" type="search" placeholder="Search food">
           </div>
-          <div id="nav-menu"
-            class="absolute top-0 left-0 hidden w-full py-12 text-center text-white bg-black border-b-2 border-primary md:static md:block md:w-auto md:bg-white md:text-black md:border-none md:py-2">
-            <ul class="flex flex-col gap-5 pt-3 md:flex-row">
-              <li>
-                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Today special offers</a>
-              </li>
-              <li>
-                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Why FoodHut</a>
-              </li>
-              <li>
-                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Our Menu</a>
-              </li>
-              <li>
-                <a class="text-sm font-bold duration-200 ease-in nav-link hover:text-primary" href="#">Our Popular food</a>
-              </li>
-    
-              <button
-                class="hidden px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl md:block">
-                <a href="#contact">Downlode App</a>
-              </button>
-            </ul>
-    
-            <div id="nav-close" class="absolute cursor-pointer right-8 top-10 md:hidden">
-              <i class="fa-solid fa-xmark"></i>
+          <img class="" src="./images/searchicon.svg" alt="">
+        </div>
+
+        <div class="flex gap-5 buttons">
+          <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+            <a href="#">Downlode App</a>
+          </button>
+
+          <button class="flex items-center gap-2 ">
+            <img class="z-20 p-4 bg-white shadow-md shadow-primary rounded-3xl bg-opacity-90"
+              src="./images/Play button.svg" alt="">
+            <a href="">Watch Video</a>
+          </button>
+
+        </div>
+
+
+      </div>
+      <div class="md:min-w-[428px]">
+        <img src="./images/heroimg.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!--==========SPECIAL OFFERS==========-->
+
+  <section>
+    <div class="container items-center px-2">
+      <div class="justify-center py-20 text-center top-heading">
+        <h1 class="mb-8 text-5xl">Today <span class="text-primary">special</span> offers</h1>
+        <p class="px-0 md:px-24">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+          has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+
+      <div class="flex cards gap-x-5">
+
+        <div class="items-center px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5">
+          <img class="mx-auto" src="./images/card1.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
             </div>
           </div>
-    
-          <div id="hamburger" class="cursor-pointer md:hidden">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-      </header>
-    
-    <!--==========HERO SECTION==========-->
-
-      <section id="hero">
-        <div class="container flex flex-col-reverse items-center md:flex-row md:justify-between md:items-start">
-        <div class="items-center pt-16">
-            <button class="flex gap-2 px-5 py-3 mb-6 bg-opacity-5 bg-primary rounded-3xl">
-                <img src="./images/heart.svg" alt="">
-                <p>People Trust us</p>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
             </button>
-            <h1 class="text-5xl font-bold lg:text-6xl">We're <span class="text-primary">Serious</span> For <span class="text-primary">Food</span> & <span class="text-secondary">Delivery</span>.</h1>
-            <div class="flex border-2 border-black max-w-[400px] search-bar rounded-3xl">
-                <img src="./images/search.svg" alt="">
-                <input class="border-none" type="search" placeholder="Search food">
-                <img class="" src="./images/searchicon.svg" alt="">
+          </div>
+
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/card2.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg2.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
             </div>
-        </div>
-        <div class="md:min-w-[428px]">
-            <img src="./images/heroimg.svg" alt="">
-        </div>
-        </div>
-      </section>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
 
-    <!--==========SPECIAL OFFERS==========-->
+        </div>
 
-    <section>
-        <div class="container py-20 text-center">
-            <div class="top-heading">
-                <h1 class="text-5xl">Today <span class="text-primary">special</span> offers</h1>
-                <p class="px-0 md:px-24">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/card3.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg3.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
             </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
 
-            <div class="flex justify-center bg-white cards ">
-                <div class=" card">
-                    <img src="./images/card1.png" alt="">
-                    
-                </div>
-            </div>
         </div>
-    </section>
 
-    <!--==========ABOUT US==========-->
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/card4.png" alt="">
 
-    <section></section>
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
 
-    <!--==========MENU==========-->
+        </div>
 
-    <section></section>
 
-    <!--==========CONTACT==========-->
+      </div>
+    </div>
+  </section>
 
-    <section></section>
+  <!--==========ABOUT US==========-->
 
-    <!--==========FOOTER==========-->
+  <section>
+    <div class="container px-2 py-20">
+      <div class="flex flex-col md:gap-10 md:flex-row md:justify-between">
+        <img class="-490px] mx-auto" src="./images/aboutimg.png" alt="">
+        <div class="">
+          <h1 class="text-5xl font-bold max-w-[452px] mb-7">We are <span class="text-primary">more</span> than <span
+              class="text-secondary">multiple</span> service</h1>
+          <p class="mb-4">This is a type of resturent which typically serves food and drink, in addition to light
+            refreshments such
+            as baked goods or snacks. The term comes frome the rench word meaning food</p>
+          <div class="flex flex-col gap-5 py-4 md:flex-row">
+            <div>
+              <div class="flex gap-2 pb-3">
+                <img src="images/ordericon.svg" alt="">
+                <p>Online Order</p>
+              </div>
+              <div class="flex gap-2 pb-3">
+                <img src="images/bookingicon.svg" alt="">
+                <p>Pre-Reservation</p>
+              </div>
+              <div class="flex gap-2 pb-3">
+                <img src="images/bookingicon.svg" alt="">
+                <p>Super Chef</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-2 pb-3">
+                <img src="images/servicesicon.svg" alt="">
+                <p>24/7 Service</p>
+              </div>
+              <div class="flex gap-2 pb-3">
+                <img src="images/bookingicon.svg" alt="">
+                <p>Oragonized Foodhut Place</p>
+              </div>
+              <div class="flex gap-2 pb-3">
+                <img src="images/bookingicon.svg" alt="">
+                <p>Clean Kitchen</p>
+              </div>
+            </div>
+          </div>
+          <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl">
+            <a href="#contact">Downlode App</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer></footer>
+  <!--==========MENU==========-->
 
-    <!--==========JAVASCRIPT LINK==========-->
+  <section>
+    <div class="container">
+      <div class="justify-center py-20 text-center top-heading">
+        <h1 class="px-0 mb-8 text-5xl md:px-40"><span class="text-primary">Menu</span> that <span
+            class="text-secondary">always</span> make you fall in <span class="text-primary">love</span></h1>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="flex mb-10 cards gap-x-5 ">
+
+
+        <div class="items-center block px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5">
+          <img class="mx-auto" src="./images/card1.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food2.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food3.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food4.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="flex mb-10 cards gap-x-5">
+
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food5.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food6.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food7.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="items-center hidden px-2 mx-auto text-center rounded-lg card max-w-80 bg-primary bg-opacity-5 md:block">
+          <img class="mx-auto" src="./images/popular food8.png" alt="">
+
+          <div class="flex justify-center gap-5">
+            <img src="./images/cardimg1.svg" alt="">
+            <div class="flex items-center gap-2">
+              <img src="./images/Star.svg" alt="">
+              <p>(4.5)</p>
+            </div>
+          </div>
+          <h1 class="py-5 font-bold text-primary">Kebab</h1>
+          <p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="flex justify-center gap-5">
+            <button class="px-4 py-2 text-sm font-bold text-white duration-200 ease-in bg-primary rounded-3xl ">
+              <a href="#">Downlode App</a>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!--==========CONTACT==========-->
+
+  <section>
+    <div class="container px-2 py-20">
+      <div class="flex flex-col md:gap-16 md:flex-row md:justify-between">
+        <img class="mx-auto" src="./images/cookimg.png" alt="">
+        <div class="pt-20">
+          <h1 class="text-4xl font-bold max-w-[452px]">It’s Now <span class="text-primary">More Easy</span> to
+            <span class="text-secondary">Order</span> by Our Mobile <span class="text-primary">App</span>
+          </h1>
+          <p class="py-10">All you need to do is downlode one of the best delivery apps, make a and most companies are
+            opting for mobile app devlopment for food delivery</p>
+            <button class="flex gap-10">
+              <img src="./images/googleplay.svg" alt="">
+              <img src="./images/appstore.svg" alt="">
+            </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========FOOTER==========-->
+
+  <footer>
+    <div class="container">
+      
+    </div>
+  </footer>
+
+  <!--==========JAVASCRIPT LINK==========-->
+
+  <script src="script.js"></script>
 </body>
 
 </html>
