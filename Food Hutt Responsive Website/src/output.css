@@ -450,11 +450,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  @a
-    
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -607,6 +602,14 @@ body {
   position: relative;
 }
 
+.-bottom-\[22px\] {
+  bottom: -22px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -662,6 +665,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -676,6 +683,10 @@ body {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-\[498px\] {
+  height: 498px;
 }
 
 .w-6 {
@@ -872,12 +883,12 @@ body {
   padding-top: 4rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
-.pt-3 {
-  padding-top: 0.75rem;
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-center {
@@ -897,6 +908,11 @@ body {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -1020,9 +1036,9 @@ body {
     padding-right: 10rem;
   }
 
-  .md\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:text-black {

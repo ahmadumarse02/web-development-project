@@ -782,10 +782,6 @@ video {
   border-width: 2px;
 }
 
-.border-b{
-  border-bottom-width: 1px;
-}
-
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -1079,6 +1075,11 @@ video {
 
   .md\:gap-6{
     gap: 1.5rem;
+  }
+
+  .md\:border-primary{
+    --tw-border-opacity: 1;
+    border-color: rgb(7 146 17 / var(--tw-border-opacity));
   }
 
   .md\:py-0{

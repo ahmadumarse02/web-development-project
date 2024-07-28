@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        'padding': '11rem',
+        'padding': '1rem',
       },
       backgroundImage: {
         'hero-image': "url('/images/h1_hero.jpg')",
